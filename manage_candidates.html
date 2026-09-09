@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manage Candidates</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Candidate List</h2>
+
+    <table border="1" width="100%" cellpadding="10">
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Party</th>
+            <th>Symbol</th>
+            <th>Action</th>
+        </tr>
+
+        {% for candidate in candidates %}
+
+        <tr>
+
+            <td>{{ candidate[0] }}</td>
+
+            <td>{{ candidate[1] }}</td>
+
+            <td>{{ candidate[2] }}</td>
+
+            <td>{{ candidate[3] }}</td>
+
+            <td>
+
+                <a href="/edit_candidate/{{ candidate[0] }}">
+                    <button class="edit-btn">Edit</button>
+                </a>
+
+                <a href="/delete_candidate/{{ candidate[0] }}">
+                    <button class="delete-btn">Delete</button>
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <!-- Back Button -->
+    <a href="/admin_dashboard" class="manage-back-btn">
+        Back
+    </a>
+
+</div>
+
+</body>
+
+</html>

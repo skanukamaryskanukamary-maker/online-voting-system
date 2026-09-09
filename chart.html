@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Election Chart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Election Results Chart</h1>
+
+    <img src="{{ url_for('static', filename='chart.png') }}"
+         width="700">
+
+    <br><br>
+
+    <a href="/results">
+        <button>Back to Results</button>
+    </a>
+
+</div>
+
+</body>
+</html>

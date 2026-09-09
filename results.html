@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Election Results</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Election Results</h1>
+
+    {% if winner %}
+
+        <h2>🏆 Winner</h2>
+
+        <h3>{{ winner[0] }} ({{ winner[1] }})</h3>
+
+        <p><strong>Total Votes:</strong> {{ winner[2] }}</p>
+
+        <hr>
+
+    {% endif %}
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <tr>
+            <th>Candidate</th>
+            <th>Party</th>
+            <th>Total Votes</th>
+        </tr>
+
+        {% for candidate in results %}
+
+        <tr>
+
+            <td>{{ candidate[0] }}</td>
+            <td>{{ candidate[1] }}</td>
+            <td>{{ candidate[2] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    <a href="/chart">
+        <button class="chart-btn">View Bar Chart</button>
+    </a>
+
+    <br><br>
+
+    <a href="/admin_dashboard">
+        <button class="back-btn">Back</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

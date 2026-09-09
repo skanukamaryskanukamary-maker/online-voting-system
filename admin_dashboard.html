@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Admin Dashboard</h1>
+
+    <a href="/add_candidate">
+        <button class="add-btn">➕ Add Candidate</button>
+    </a>
+
+    <br><br>
+
+    <a href="/manage_candidates">
+        <button class="manage-btn">👥 Manage Candidates</button>
+    </a>
+
+    <br><br>
+
+    <a href="/results">
+        <button class="result-btn">📊 View Results</button>
+    </a>
+
+    <br><br>
+
+    <a href="/chart">
+        <button class="chart-btn">📈 Bar Chart</button>
+    </a>
+
+    <br><br>
+
+    <a href="/reset_election">
+        <button class="reset-btn">🔄 Reset Election</button>
+    </a>
+
+    <br><br>
+
+    <a href="/logout">
+        <button class="logout-btn">🚪 Logout</button>
+    </a>
+
+</div>
+
+</body>
+</html>

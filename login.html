@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <!-- Login Icon -->
+        <div class="login-icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <!-- Heading -->
+        <h1>User Login</h1>
+
+        <!-- Subtitle -->
+        <p class="subtitle">
+            Login to continue and cast your vote
+        </p>
+
+        <!-- Line -->
+        <div class="line"></div>
+
+        <!-- Login Form -->
+        <form action="/login" method="POST">
+
+            <!-- Email -->
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="login-btn">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </button>
+
+        </form>
+
+        <!-- Back Button -->
+        <a href="/" class="back-home">
+    <i class="fa-solid fa-arrow-left"></i>
+    <span>Back to Home</span>
+</a>
+
+    </div>
+
+</body>
+
+</html>

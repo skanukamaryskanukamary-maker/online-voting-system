@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Candidate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Add Candidate</h2>
+
+<form method="POST">
+
+<input type="text" name="name" placeholder="Candidate Name" required>
+
+<input type="text" name="party" placeholder="Party Name" required>
+
+<input type="text" name="symbol" placeholder="Election Symbol" required>
+
+<button type="submit">Add Candidate</button>
+
+</form>
+
+<br>
+
+<a href="/admin_dashboard" class="add-back-btn">
+    Back
+</a>
+</div>
+
+</body>
+</html>

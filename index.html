@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ONLINE VOTING SYSTEM</h1>
+
+        <p>Welcome to Online Voting System</p>
+
+        <br>
+
+        <!-- REGISTER -->
+        <a href="/register">
+            <button type="button"
+                style="
+                width: 220px;
+                height: 60px;
+                background-color: #28a745 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                ">
+                Register
+            </button>
+        </a>
+
+        <br><br>
+
+        <!-- LOGIN -->
+        <a href="/login">
+            <button type="button"
+                style="
+                width: 220px;
+                height: 60px;
+                background-color: #087df5 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                ">
+                Login
+            </button>
+        </a>
+
+        <br><br>
+
+        <!-- ADMIN LOGIN -->
+        <a href="/admin_login">
+            <button type="button"
+                style="
+                width: 220px;
+                height: 60px;
+                background-color: #7040c5 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                ">
+                Admin Login
+            </button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

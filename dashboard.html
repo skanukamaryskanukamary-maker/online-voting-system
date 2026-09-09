@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard-card">
+
+        <!-- User Icon -->
+        <div class="dashboard-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <!-- Heading -->
+        <h1>Online Voting System</h1>
+
+        <h2>
+            Welcome {{ session['user_name'] }}
+        </h2>
+
+        <p>Select an option below</p>
+
+        <!-- Buttons -->
+        <div class="dashboard-buttons">
+
+            <!-- Vote Button -->
+            <a href="/vote" class="vote-btn">
+                <i class="fa-solid fa-check-to-slot"></i>
+                <span>Vote</span>
+                <span class="arrow">→</span>
+            </a>
+
+            <!-- Logout Button -->
+            <a href="/logout" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+                <span class="arrow">→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
